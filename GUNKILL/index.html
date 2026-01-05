@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GUNKILL</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Landing Screen -->
+  <div id="landing" class="screen active">
+    <h1 class="logo">GUNKILL</h1>
+    <button id="btn-start-landing">PRESS START</button>
+  </div>
+
+  <!-- Story Screen -->
+  <div id="story" class="screen">
+    <div class="story-text">
+      <p>The year is 2045. Your research lab was destroyed in a covert raid.</p>
+      <p>Your mentor—Professor Arlen—was executed before your eyes.</p>
+      <p>Now, armed with nothing but your wits and a pistol... you seek REVENGE.</p>
+    </div>
+    <button id="btn-start-game">START GAME</button>
+  </div>
+
+  <!-- Customization Screen -->
+<div id="customize" class="screen">
+  <h2>CREATE YOUR REVENGER</h2>
+  
+  <div class="char-preview">
+    <canvas id="previewCanvas" width="120" height="180"></canvas>
+  </div>
+
+  <div class="options">
+    <div>
+      <label>Skin:</label>
+      <input type="color" id="skinColor" value="#4e9af1">
+    </div>
+    <div>
+      <label>Eyes:</label>
+      <input type="color" id="eyeColor" value="#ffffff">
+    </div>
+    <div>
+      <label>Outfit:</label>
+      <select id="outfit">
+        <option value="tactical">Tactical Vest</option>
+        <option value="scientist">Lab Coat</option>
+        <option value="rebel">Rebel Gear</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Level Select Screen -->
+<div id="levelSelect" class="screen">
+  <!-- Filled by JS -->
+</div>
+
+  <button id="btn-save-custom">SAVE & START</button>
+</div>
+
+  <!-- Game Screen -->
+<!-- Game Screen -->
+<div id="game" class="screen">
+  <canvas id="gameCanvas" width="1200" height="600"></canvas>
+  
+  <!-- 🔴 PLAYER HEALTH BAR (always visible) -->
+  <div id="healthBarContainer">
+    <div id="healthFill"></div>
+  </div>
+  <span id="healthValue">100</span>
+
+  <!-- BOSS HEALTH BAR (appears during boss fight) -->
+  <div id="bossHealth" class="hidden">
+    <div id="bossLabel">BOSS</div>
+    <div id="bossFill"></div>
+  </div>
+</div>
+
+  <!-- Win Screen -->
+  <div id="winScreen" class="screen">
+    <h2>CONGRATULATIONS!</h2>
+    <p>You’ve avenged Professor Arlen.</p>
+    <p>The final door awaits...</p>
+    <button id="btn-enter-door">ENTER DOOR</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
